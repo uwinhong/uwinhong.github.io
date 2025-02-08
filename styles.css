@@ -1,0 +1,51 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.name {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.separator {
+    color: white;
+    font-weight: bold;
+}
+
+.platform-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s;
+}
+
+.platform-icon:hover {
+    transform: scale(1.1);
+} 

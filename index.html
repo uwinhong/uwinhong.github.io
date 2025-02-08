@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UWINHONG的游戏小屋</title>
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <footer>
+            <div class="footer-content">
+                <span class="name">UWINHONG</span>
+                <span class="separator">|</span>
+                <a href="https://uwinhong.itch.io/" target="_blank" title="itch.io">
+                    <img src="https://itch.io/favicon.ico" alt="itch.io" class="platform-icon">
+                </a>
+                <a href="https://www.taptap.cn/developer/100242" target="_blank" title="TapTap">
+                    <img src="https://www.taptap.cn/favicon.ico" alt="TapTap" class="platform-icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // title config
+        const titles = {
+            'zh-CN': 'UWINHONG的游戏小屋',
+            'zh-TW': 'UWINHONG的遊戲小屋',
+            'en': 'UWINHONG\'s Game Corner',
+            'ru': 'Игровой уголок UWINHONG',
+            'es': 'El Rincón de Juegos de UWINHONG',
+
+            'pt': 'O Cantinho de Jogos do UWINHONG',
+            'de': 'UWINHONGs gemütliche Spielecke',
+            'ja': 'UWINHONGのゲーム小屋',
+            'fr': 'Le Coin de Jeux d\'UWINHONG',
+            'ko': 'UWINHONG의 게임 공간'
+        };
+
+        // language detection
+        const userLang = navigator.language || navigator.userLanguage;
+        const langCode = userLang.toLowerCase();
+        
+        let currentLang = 'en';
+        if (langCode.startsWith('zh')) {
+            currentLang = langCode.includes('tw') || langCode.includes('hk') ? 'zh-TW' : 'zh-CN';
+        } else if (langCode.startsWith('ru')) {
+            currentLang = 'ru';
+        } else if (langCode.startsWith('es')) {
+            currentLang = 'es';
+        } else if (langCode.startsWith('pt')) {
+            currentLang = 'pt';
+        } else if (langCode.startsWith('de')) {
+            currentLang = 'de';
+        } else if (langCode.startsWith('ja')) {
+            currentLang = 'ja';
+        } else if (langCode.startsWith('fr')) {
+            currentLang = 'fr';
+        } else if (langCode.startsWith('ko')) {
+            currentLang = 'ko';
+        }
+        
+        // set title
+        document.title = titles[currentLang];
+    </script>
+</body>
+</html>
